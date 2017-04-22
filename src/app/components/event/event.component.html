@@ -1,0 +1,23 @@
+<div *ngIf="event">
+<a [routerLink]="['/events']"  > Go Back </a>
+<br/>
+<h2 class="page-header"></h2>
+<div class="row">
+    <div class="col-md-4">
+      <img style="width:100%" class="thumbnail" src="{{imageUrl}}">
+    </div>
+
+    <div class="col-md-8">
+      <ul class="list-group">
+        <li class="list-group-item" >Event Name: {{event.name}} </li>
+        <li class="list-group-item" >Author: {{event.author}}</li>
+        <li class="list-group-item" >Date: {{event.date}}, Time: {{event.time}}</li>
+        <li class="list-group-item" >Duration: {{event.duration}}</li>
+        <li class="list-group-item" >Address: {{event.address}}</li>
+        <li class="list-group-item" >Details: {{event.details}}</li>
+       </ul>
+     </div>
+     <a class="btn btn-default" [routerLink]="['/edit-event/'+event.$key]">Edit</a>
+     <a (click)="onDeleteClick()" class="btn btn-danger" href="">Delete</a>
+</div>
+</div>

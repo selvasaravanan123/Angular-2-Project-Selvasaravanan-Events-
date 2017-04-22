@@ -1,0 +1,46 @@
+<a [routerLink]="['/events']" >Back</a>
+<br/>
+<h2 class="page-header">Add Events</h2>
+<form (submit)="OnAddSubmit()" >
+  <div class="form-group">
+    <label>Title</label>
+    <input class="form-control" type="text" name="title" [(ngModel)]="title" required >
+  </div>
+    <div class="form-group">
+    <label>Author</label>
+    <input class="form-control" type="text" name="author" [(ngModel)]="author" required>
+  </div>
+    <div class="form-group">
+    <label>Details</label>
+    <input class="form-control" type="text" name="details" [(ngModel)]="details" required>
+  </div>
+    <div class="form-group">
+    <label>Name</label>
+    <input class="form-control" type="text" name="name" [(ngModel)]="name" required>
+  </div>
+    <div class="form-group">
+    <label>Image</label>
+    <input id="image" class="form-control" type="file" name="image" [(ngModel)]="image" >
+  </div>
+    <div class="form-group">
+    <label>Duration</label>
+    <input class="form-control" type="text" name="duration" [(ngModel)]="duration" required>
+  </div>
+    <div class="form-group">
+    <label>Date</label>
+    <input class="form-control" type="date" name="date" [(ngModel)]="date" required>
+  </div>
+    <div class="form-group">
+    <label>Time</label>
+    <input class="form-control" type="time" name="time" [(ngModel)]="time" required>
+  </div>
+    <div class="form-group">
+    <label>Address</label>
+    <input class="form-control" type="text" name="address" [(ngModel)]="address" required>
+  </div>
+    <div class="form-group">
+    <label>City</label>
+    <input class="form-control" type="text" name="city" [(ngModel)]="city" required>
+  </div>
+  <input type="submit" value="submit" class="btn btn-success">
+</form>

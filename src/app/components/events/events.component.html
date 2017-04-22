@@ -1,0 +1,17 @@
+<div class=" container">
+  <div class="col-xs-12">
+		<form class="well">
+			<div class="form-group">
+				<input type="text" class="form-control" placeholder="Search for your favourite events here..." [(ngModel)]="search" name="search" (keyup)="searchEvents()">	
+			</div>						
+		</form>	
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let event of events">
+      <div class="well">
+        <a [routerLink]="['/event/'+event.$key]" ><strong>{{event.title}}</strong></a>
+      </div>
+    </li>
+  </ul>
+</div>
+    <div class="col-xs-12" *ngIf="count === 0">Not properties found.</div>
+</div>
